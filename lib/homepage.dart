@@ -1,3 +1,4 @@
+import 'package:noor_optical/menupage.dart';
 import 'package:noor_optical/widgets/scrollcircularwidget.dart';
 import 'package:noor_optical/widgets/arctext.dart';
 import 'package:flutter/material.dart';
@@ -124,11 +125,11 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 40, vertical: 20),
                       backgroundColor: Colors.white,
-                      // onPressed: () {
-                      //   Navigator.of(context).push(MaterialPageRoute(
-                      //     builder: (context) => MainPage(),
-                      //   ));
-                      // },
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => MenuPage(),
+                        ));
+                      },
                       label: const Text(
                         "Get Started",
                         style: TextStyle(
