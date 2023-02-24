@@ -31,7 +31,7 @@ class _PowerGroupState extends State<PowerGroup> {
                 children: [
                   Expanded(child:
                   Container(
-                    color: Color(0xff17181f),
+                    color: Color(0xff613ea2),
                     )
                   ),
                   Expanded(child:
@@ -50,12 +50,12 @@ class _PowerGroupState extends State<PowerGroup> {
                 children: [
                   Expanded(child:
                   Container(
-                    color: Color(0xff17181f),
+                    color: Color(0xff150236),
                    )
                   ),
                   Expanded(child:
                   Container(
-                    color: Color(0xff17181f),
+                    color: Color(0x208a4bfe),
                    )
                   ),
                 ],

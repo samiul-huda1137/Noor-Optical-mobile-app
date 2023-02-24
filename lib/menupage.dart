@@ -40,7 +40,7 @@ class MenuPage extends StatelessWidget {
                       child: const CircleAvatar(
                         radius: 88,
                         backgroundImage: AssetImage(
-                        "assets/img/Main.jpg",
+                        "assets/img/7.jpg",
                       ),
                       ),
                     ),
