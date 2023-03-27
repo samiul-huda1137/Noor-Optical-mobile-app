@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "359644785801",
+    "project_id": "noor-optical",
+    "storage_bucket": "noor-optical.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359644785801:android:cdd1e1965bf606ecaaaa58",
+        "android_client_info": {
+          "package_name": "com.example.noor_optical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359644785801-0k7l0h15npa5lh90t74tj08lfaq9t076.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtkJ-7HuZ36gOzgAxKWxgurxMUh7bi5IQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359644785801-0k7l0h15npa5lh90t74tj08lfaq9t076.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
