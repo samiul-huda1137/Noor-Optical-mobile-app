@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:noor_optical/appointment.dart';
-import 'package:noor_optical/powergroup.dart';
-import 'package:noor_optical/sell.dart';
+import 'package:noor_optical/pages/appointment.dart';
+import 'package:noor_optical/pages/powergroup.dart';
+import 'package:noor_optical/pages/sell.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({Key? key}) : super(key: key);
