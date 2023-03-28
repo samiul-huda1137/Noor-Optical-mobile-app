@@ -21,32 +21,57 @@ class AuthController extends GetxController{
   _initialScreen(User? user){
     if(user==null){
       print("login page");
-      Get.offAll(()=>LoginPage());
+      Get.offAll(()=>const LoginPage());
     }else{
-      Get.offAll(()=>MenuPage());
+      Get.offAll(()=>const MenuPage());
     }
   }
 
-  void register(String email, password){
+  void register(String email, password) async {
     try{
-      auth.createUserWithEmailAndPassword(email: email, password: password);
+      await auth.createUserWithEmailAndPassword(email: email, password: password);
     }catch(e){
       Get.snackbar("About User", "User message",
-      backgroundColor: Colors.redAccent,
-      snackPosition: SnackPosition.BOTTOM,
-        titleText: Text(
-          "Account creation failed",
-          style: TextStyle(
-            color: Colors.white
+          backgroundColor: Colors.redAccent,
+          snackPosition: SnackPosition.BOTTOM,
+          titleText: const Text(
+            "Account creation failed",
+            style: TextStyle(
+                color: Colors.white
+            ),
           ),
-        ),
-        messageText: Text(
-          e.toString(),
-          style: TextStyle(
-              color: Colors.white
-          ),
-        )
+          messageText: Text(
+            e.toString(),
+            style: const TextStyle(
+                color: Colors.white
+            ),
+          )
       );
     }
+  }
+  void login(String email, password) async {
+    try{
+      await auth.signInWithEmailAndPassword(email: email, password: password);
+    }catch(e){
+      Get.snackbar("About Login", "login message",
+          backgroundColor: Colors.redAccent,
+          snackPosition: SnackPosition.BOTTOM,
+          titleText: const Text(
+            "Login failed",
+            style: TextStyle(
+                color: Colors.white
+            ),
+          ),
+          messageText: Text(
+            e.toString(),
+            style: const TextStyle(
+                color: Colors.white
+            ),
+          )
+      );
+    }
+  }
+  void logOut() async {
+    await auth.signOut();
   }
 }

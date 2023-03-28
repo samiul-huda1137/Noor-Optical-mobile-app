@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
             height: h*0.3,
             decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage(
-                    "img/newlogin.png"
+                    "img/loginimg.png"
                 ),
                     fit: BoxFit.cover
                 )
@@ -102,6 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                       ]
                   ),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                         hintText: "Password",
                         prefixIcon: Icon(Icons.password_sharp, color: Colors.deepOrangeAccent,),
@@ -136,7 +137,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ],
                 ),
-
               ],
             ),
           ),
@@ -181,7 +181,8 @@ class _LoginPageState extends State<LoginPage> {
                     recognizer: TapGestureRecognizer()..onTap=()=>Get.to(()=>SignupPage())
                 )
               ]
-          ))
+          )
+          )
         ],
       ),
     );

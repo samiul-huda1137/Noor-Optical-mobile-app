@@ -9,7 +9,7 @@ class SignupPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var nameController = TextEditingController();
+    var emailController = TextEditingController();
     var passController = TextEditingController();
 
     List images=[
@@ -52,7 +52,6 @@ class SignupPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 SizedBox(height: h*0.05,),
                 Container(
                   decoration: BoxDecoration(
@@ -68,10 +67,10 @@ class SignupPage extends StatelessWidget {
                       ]
                   ),
                   child: TextField(
-                    controller: nameController,
+                    controller: emailController,
                     decoration: InputDecoration(
-                        hintText: "Name",
-                        prefixIcon: Icon(Icons.person, color: Colors.deepOrangeAccent,),
+                        hintText: "Email",
+                        prefixIcon: Icon(Icons.email_rounded, color: Colors.deepOrangeAccent,),
                         focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30),
                             borderSide: BorderSide(
@@ -129,26 +128,25 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20,),
-                // Row(
-                //   children: [
-                //     Expanded(child: Container()),
-                //     Text(
-                //       "Forgot password?",
-                //       style: TextStyle(
-                //           fontSize: 20,
-                //           color: Colors.grey[500]
-                //       ),
-                //     ),
-                //   ],
-                // ),
-
+                Row(
+                  children: [
+                    Expanded(child: Container()),
+                    Text(
+                      "Forgot password?",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.grey[500]
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
           SizedBox(height: h*0.07),
           GestureDetector(
             onTap: (){
-              AuthController.instance.register(nameController.text.trim(), passController.text.trim());
+              AuthController.instance.register(emailController.text.trim(), passController.text.trim());
             },
             child: Container(
               width: w*0.5,
