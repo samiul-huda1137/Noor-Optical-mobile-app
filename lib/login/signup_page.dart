@@ -20,6 +20,7 @@ class SignupPage extends StatelessWidget {
     double w= MediaQuery.of(context).size.width;
     double h= MediaQuery.of(context).size.height;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       body: Column(
         children: [
@@ -128,18 +129,6 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20,),
-                Row(
-                  children: [
-                    Expanded(child: Container()),
-                    Text(
-                      "Forgot password?",
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.grey[500]
-                      ),
-                    ),
-                  ],
-                ),
               ],
             ),
           ),
@@ -165,7 +154,7 @@ class SignupPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white
+                      color: Colors.black
                   ),
                 ),
               ),

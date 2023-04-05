@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:noor_optical/login/signup_page.dart';
 
+import 'auth_controller.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -14,6 +16,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    var emailController = TextEditingController();
+    var passController = TextEditingController();
     double w= MediaQuery.of(context).size.width;
     double h= MediaQuery.of(context).size.height;
     return Scaffold(
@@ -141,24 +145,29 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           SizedBox(height: h*0.07),
-          Container(
-            width: w*0.5,
-            height: h*0.08,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: DecorationImage(image: AssetImage(
-                    "img/loginbtn.png"
-                ),
-                    fit: BoxFit.cover
-                )
-            ),
-            child: Center(
-              child: Text(
-                "Sign In",
-                style: TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white
+          GestureDetector(
+            onTap: (){
+              AuthController.instance.login(emailController.text.trim(), passController.text.trim());
+            },
+            child: Container(
+              width: w*0.5,
+              height: h*0.08,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(image: AssetImage(
+                      "img/loginbtn.png"
+                  ),
+                      fit: BoxFit.cover
+                  )
+              ),
+              child: Center(
+                child: Text(
+                  "Sign In",
+                  style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                  ),
                 ),
               ),
             ),

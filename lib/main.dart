@@ -7,8 +7,11 @@ import 'package:noor_optical/pages/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:noor_optical/pages/powergroup.dart';
 import 'package:get/get.dart';
+import 'package:noor_optical/pages/splash_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp().then((value) => Get.put(AuthController()));
   runApp(MyApp());
 }
 
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Noor Optical',
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
